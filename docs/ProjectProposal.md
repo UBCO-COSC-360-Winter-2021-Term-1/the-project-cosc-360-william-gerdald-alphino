@@ -17,6 +17,24 @@ Search Bar/Filter: Search bar to find topics using keywords
 
 User images (thumbnail) and profile stored in database
 
+Appropriate security for data
+
+**Website user’s objectives:**
+* Browse discussions without registering
+* Search for posts by keyword without registering
+* Search for items/posts by keyword without registering
+* Register at the site by providing their name, e-mail and image
+* Allow user login by providing user id and password
+* Create and comment on discussions when logged into the site
+* Users are required to be able to view/edit their profile
+* User password recovery (via email) 
+
+**Website administrator’s objectives:**
+* Search for user by name, email or post
+* Enable/disable users
+* Edit/remove items and comments
+ 
+
 *Tech stack:*\
 Front End: HTML, CSS and JavaScript
 
