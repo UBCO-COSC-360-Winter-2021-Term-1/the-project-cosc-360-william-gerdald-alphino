@@ -1,0 +1,62 @@
+body{
+    background-color: darkgray;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer{
+        
+    background-color: grey;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    text-align: center;
+    border: 0.2em darkblue solid;
+}
+
+footer{
+    padding-bottom: 1em;
+}
+
+header nav{
+    background-color: gainsboro;
+    padding: 0.07em;
+}
+
+nav ul{
+    padding: 0.4em;
+}
+
+nav ul li{
+    display: inline;
+    padding-right: 0.5em;
+}
+
+a:link{
+    color: green;
+    font-weight: bold;
+}
+
+a:visited{
+    color: red;
+}
+
+a:hover{
+    background-color: blueviolet;
+}
+
+#post{
+    text-align: center;
+}
+
+img{
+    border: 0.15em solid black;
+    padding: 0.5em;
+}
+
+.comment{
+    border: 0.1em solid grey;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    color: darkblue;
+}

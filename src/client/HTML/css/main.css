@@ -1,93 +1,101 @@
-body {
-	font-family: 'Open Sans', sans-serif;
-	line-height: 1.75em;
-	font-size: 16px;
-	background-color: #222;
-	color: #aaa;
+
+body{
+    background-color: grey;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.simple-container {
-	max-width: 675px;
-	margin: 0 auto;
-	padding-top: 70px;
-	padding-bottom: 20px;
+header, footer{
+    
+    background-color:gainsboro;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    text-align: center;
+    border: 0.2em darkblue solid;
 }
 
-.simple-print {
-	fill: white;
-	stroke: white;
-}
-.simple-print svg {
-	height: 100%;
+footer{
+    padding-bottom: 1em;
 }
 
-.simple-close {
-	color: white;
-	border-color: white;
+header nav{
+    background-color: gainsboro;
+    padding: 0.07em;
 }
 
-.simple-ext-info {
-	border-top: 1px solid #aaa;
+main{
+    display: flex;
 }
 
-p {
-	font-size: 16px;
+nav ul{
+    padding: 0.4em;
 }
 
-h1 {
-	font-size: 30px;
-	line-height: 34px;
+nav ul li{
+    display: inline;
+    padding-right: 0.5em;
 }
 
-h2 {
-	font-size: 20px;
-	line-height: 25px;
+a:link{
+    color: yellow;
+    font-weight: bold;
 }
 
-h3 {
-	font-size: 16px;
-	line-height: 27px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	border-bottom: 1px solid #D8D8D8;
-	border-top: 1px solid #D8D8D8;
+a:visited{
+    color: red;
 }
 
-hr {
-	height: 1px;
-	background-color: #d8d8d8;
-	border: none;
-	width: 100%;
-	margin: 0px;
+a:hover{
+    background-color: blue;
 }
 
-a[href] {
-	color: #1e8ad6;
+section{
+    flex: 60%;
+    margin-right: 2.5em;
 }
 
-a[href]:hover {
-	color: #3ba0e6;
+aside{
+    flex: 40%;
+}
+
+aside div{
+    border: 0.1em solid grey;
+    padding: 1em;
+    background-color: greenyellow;
+    margin-bottom: 0.5em;
+
+}
+
+aside div h3{
+    text-align: center;
 }
 
 img {
-	max-width: 100%;
+    width: 15em;
+    height: 10em;
 }
 
-li {
-	line-height: 1.5em;
+article{
+    width: 45em;
+   
+    border: 0.1em solid gray;
+    padding: 1em;
+    margin-bottom: 1em;
+    display: flex;
 }
 
-aside,
-[class *= "sidebar"],
-[id *= "sidebar"] {
-	max-width: 90%;
-	margin: 0 auto;
-	border: 1px solid lightgrey;
-	padding: 5px 15px;
+article img{
+    flex: 30%;
+    margin-right: 1.2em;
+}
+article div{
+    flex: 70%;
 }
 
-@media (min-width: 1921px) {
-	body {
-		font-size: 18px;
-	}
+article div h6{
+    text-align: right;
+}
+
+form{
+    text-align: center;
 }

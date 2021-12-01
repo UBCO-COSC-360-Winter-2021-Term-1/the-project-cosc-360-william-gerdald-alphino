@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script type="text/javascript" src="script/signin.js"></script>
+</head>
+<body>
+
+</header>
+<h3>GAMEX SIGN UP PAGE</h3>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+<form action="newaccount.php" method="post" id="form">
+    Username:<br>
+    <input type="text" name="username" id="username" class="required">
+    <br>
+    email:<br>
+    <input type="text" name="email" id="email" class="required">
+    <br>
+
+    Password:<br>
+    <input type="password" name="password" id="password" class="required" onchange="checkPasswordMatch(e);">
+    <br>
+    Re-enter Password:<br>
+    <input type="password" name="password-check" id="password-check" class="required" onchange="checkPasswordMatch(e);">
+    <br><br>
+    Profile Image:<br>
+    <input type="file" name="image" id="image" class="required">
+    <br><br>
+    <input type="submit" value="Create New User" id="submit">
+</form>
+</body>
+</html>
