@@ -77,8 +77,6 @@ img {
 
 article{
     width: 45em;
-   
-    border: 0.1em solid gray;
     padding: 1em;
     margin-bottom: 1em;
     display: flex;
