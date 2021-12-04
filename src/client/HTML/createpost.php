@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <script type="text/javascript" src="../js/validate.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script type="text/javascript" src="scripts/validate.js"></script>
     <title>New Post</title>
 </head>
 <body>
@@ -21,8 +22,8 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<li><a href=\"logout.html\">Logout</a></li></ul></nav></header>";
         echo "<h3>Post created!</h3><br><br>";
-        echo "<a href=\"newpost.html\">Make another post now!</a><br><br>";
-        echo "<a href=\"index.html\">Go To Main Page</a><br><br>";
+        echo "<a href=\"createPost.html\">Make another post now!</a><br><br>";
+        echo "<a href=\"main.html\">Go To Main Page</a><br><br>";
     }
 
     else if ($_SERVER["REQUEST_METHOD"] == "GET"){
