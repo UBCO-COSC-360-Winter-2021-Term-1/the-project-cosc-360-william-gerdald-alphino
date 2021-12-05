@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <script type="text/javascript" src="../js/validate.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script type="text/javascript" src="scripts/validate.js"></script>
     <title>Login</title>
 </head>
 <body>
@@ -13,16 +14,16 @@
         <h1>GameX</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="newpost.html">Make New Post</a></li>
-                <li><a href="editprofile.html">Edit your profile</a></li>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="CreatePost.html">Make New Post</a></li>
+                <li><a href="editProfile.html">Edit your profile</a></li>
 
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<li><a href=\"logout.html\">Logout</a></li></ul></nav></header>";
         echo "<h3>You are now logged in!</h3><br><br>";
-        echo "<a href=\"newpost.html\">Make new post now!</a><br><br>";
-        echo "<a href=\"editprofile.html\">Edit your profile</a><br><br>";
+        echo "<a href=\"createPost.html\">Create a new Post</a><br><br>";
+        echo "<a href=\"editProfile.html\">Edit your profile</a><br><br>";
     }
 
     else if ($_SERVER["REQUEST_METHOD"] == "GET"){
