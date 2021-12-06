@@ -38,9 +38,11 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`ID`, `categoryName`) VALUES
 (1, 'Shooting'),
-(2, 'World of Warcraft'),
-(3, 'Pokemon Go'),
-(4, 'Star Wars');
+(2, 'Sports'),
+(3, 'Horror'),
+(4, 'Simulation');
+(5, 'Indie');
+
 
 -- --------------------------------------------------------
 
@@ -62,10 +64,10 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`ID`, `postDate`, `title`, `postContent`, `postUserId`, `postCategoryId`) VALUES
-(1, '2021-04-02 16:03:51', 'Who would win if Thor and The Hulk fought to the death?', 'I don\'t know who would win, what do y\'all think?', 1, 1),
-(2, '2021-04-02 16:06:22', 'Jar Jar Binks is definitely a Jedi', 'it\'s all an act. He is secretly a jedi. There is no way JAR JAR BINKS can jump 20 feet without using the force.', 2, 4),
-(3, '2021-04-02 16:07:11', 'Fireball go brrrrrr', 'Phat fireball crit. Enjoy gamers. ', 3, 2),
-(4, '2021-04-02 16:08:12', 'SHINY!!!! YOOOOO LETS GOO!!!!', 'woohoo!! shiny gengar!!', 4, 3);
+(1, '2021-11-04 16:03:51', 'This new shooting game check it out', 'you should buy it now its on sale', 1, 1),
+(2, '2021-11-12 16:06:22', 'I love soccer', ' this game is perfect for all soccer fans', 2, 4),
+(3, '2021-12-01 16:07:11', 'Scare game extreme', 'I had to return the game it was too scary', 3, 2),
+(4, '2021-12-02 16:08:12', 'Farm game', 'woohoo!! love harvesting', 4, 3);
 
 -- --------------------------------------------------------
 
@@ -86,7 +88,7 @@ CREATE TABLE `replies` (
 --
 
 INSERT INTO `replies` (`ID`, `content`, `replyDate`, `replyUserId`, `replyPostId`) VALUES
-(1, 'Thor would definitely Win, Mjolnir goes too hard.', '2021-04-02 16:11:46', 2, 1);
+(1, 'really, i will reccomend this to my friends', '2021-04-02 16:11:46', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -111,10 +113,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `username`, `password`, `firstName`, `lastName`, `email`, `securityLevel`, `creationDate`, `active`) VALUES
-(1, 'jason', 'ae808c4e4eb3723da7032ae66328dba9', 'test1', 'user1', 'jschaad@gmail.com', 2, '2021-04-02 15:51:55', 1),
-(2, 'nick', '5f4dcc3b5aa765d61d8327deb882cf99', 'test2', 'user2', 'test2@gmail.com', 2, '2021-04-02 15:54:44', 1),
-(3, 'lily', '5f4dcc3b5aa765d61d8327deb882cf99', 'test3', 'user3', 'test3@gmail.com', 2, '2021-04-02 15:55:38', 1),
-(4, 'jasper', '5f4dcc3b5aa765d61d8327deb882cf99', 'test4', 'user4', 'test4@gmail.com', 2, '2021-04-02 15:56:04', 1);
+(1, 'alvin', 'ae808c4e4eb3723dr7062ac99328dba9', 'test0', 'user0', 'alvin@gmail.com', 2, '2021-11-11 15:51:55', 1),
+(2, 'vilal', '5f4dcc3b5aa765d61d8327deb882cf99', 'test2', 'user2', 'test22@gmail.com', 2, '2021-11-11 15:54:44', 1),
+(3, 'villafran', '5f4dcc3b5aa765d61d8327deb882cf99', 'test3', 'user3', 'test@gmail.com', 2, '2021-11-11 15:56:38', 1),
+(4, 'alvvil', '5f4dcc3b5aa765d61d8327deb882cf99', 'test4', 'user4', 'test1@gmail.com', 2, '2021-11-11 15:57:04', 1);
 
 --
 -- Indexes for dumped tables

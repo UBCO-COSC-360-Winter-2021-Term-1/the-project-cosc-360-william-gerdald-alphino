@@ -6,19 +6,15 @@ body{
 
 header, footer{
     
-    background-color:gainsboro;
+    background-color:whitesmoke;
     margin-bottom: 1em;
     padding-top: 1em;
     text-align: center;
     border: 0.2em darkblue solid;
 }
 
-footer{
-    padding-bottom: 1em;
-}
-
 header nav{
-    background-color: gainsboro;
+    background-color: white;
     padding: 0.07em;
 }
 
@@ -65,7 +61,7 @@ aside div{
 
 }
 
-aside div h3{
+aside div h3 h1{
     text-align: center;
 }
 
@@ -96,3 +92,23 @@ article div h6{
 form{
     text-align: center;
 }
+#searchbar{
+    display:flex;
+    text-align: center;
+}
+
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px;
+
+  }
+  
+  .row {
+    display: flex;
+  }
+  #groupName{
+      color: thistle;
+  }
