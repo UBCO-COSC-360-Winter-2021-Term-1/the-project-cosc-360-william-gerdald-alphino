@@ -49,12 +49,12 @@ a:hover{
 }
 
 img{
-    border: 0.15em solid black;
+    border: 0.15em solid darkblue;
     padding: 0.5em;
 }
 
 .comment{
-    border: 0.1em solid grey;
+    border: 0.1em solid darkcyan;
     margin-bottom: 1em;
     padding: 0.5em;
     color: darkblue;
