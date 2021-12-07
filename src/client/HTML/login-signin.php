@@ -25,9 +25,9 @@
         echo "<a href=\"createPost.html\">Create a new Post</a><br><br>";
         echo "<a href=\"editProfile.html\">Edit your profile</a><br><br>";
         $host     = "localhost";
-$database = "lab9";
-$user     = "webuser";
-$password = "P@ssw0rd";
+        $database = "GameX";
+        $user     = "webuser";
+        $password = "P@ssw0rd";
 
 $connection = mysqli_connect($host, $user, $password, $database);
 
