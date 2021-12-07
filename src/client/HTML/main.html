@@ -7,7 +7,7 @@
     <title>GameX</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/form.css">
-    <script type="text/javascript" src="scripts/validate.js"></script>
+    <script type="text/javascript" src="../js/collapsible.js"></script>
 
 </head>
 <body>
@@ -85,8 +85,20 @@
             <div>
                 <h3>More Discussions</h3>
                 <a href="https://store.steampowered.com/"><p>New Release</p></a>
+                <button type="button" class="collapsible" onclick="collapse()">Click to view description</button>
+                <div class="content">
+                  <p> Find out new games have just hit the shelves and what people are saying about them!</p>
+                </div>
                 <a href="https://www.ign.com/upcoming/games"><p>Upcoming Release</p></a>
+                <button type="button" class="collapsible" onclick="collapse()">Click to view description</button>
+                <div class="content">
+                  <p> Find out what game developers have been working on and watch their trailers!</p>
+                </div>
                 <a href="https://newzoo.com/insights/rankings/top-20-pc-games/"><p>Popular</p></a>
+                <button type="button" class="collapsible" onclick="collapse()">Click to view description</button>
+                <div class="content">
+                  <p> Find out whats popular amoungst the gamer community!</p>
+                </div>
             </div>
         </aside>
     </main>
