@@ -76,18 +76,16 @@ else
 
     mysqli_close($connection);
 }
-    }
 
-    else if ($_SERVER["REQUEST_METHOD"] == "GET"){
-        echo "<h3>GET method is not supported!</h3>";
-    } 
 
-    else {
-        echo "<h3>ERROR!!</h3>";
-    }
+
+
+
+
+
 ?>
 
 <footer>
-    </footer>
+</footer>
 </body>
 </html>
