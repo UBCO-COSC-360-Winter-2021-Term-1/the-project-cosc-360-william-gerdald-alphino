@@ -10,12 +10,12 @@ function isBlank(inputField)
 }
 
 function makeRed(inputDiv){
-	inputDiv.style.borderColor="#DDA0DD";
-  inputDiv.style.background="#DDA0DD";
+	inputDiv.style.borderColor="red";
+  inputDiv.style.background="red";
 }
 
 function makeClean(inputDiv){
-	inputDiv.style.borderColor="#FFFFFF";
+	inputDiv.style.borderColor="white";
 }
 
 window.onload = function() {
