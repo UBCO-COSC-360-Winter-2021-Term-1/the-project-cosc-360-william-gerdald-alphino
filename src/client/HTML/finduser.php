@@ -25,7 +25,7 @@
         echo "<a href=\"admin.html\">Go To Previous Page</a><br><br>";
 
 $host     = "localhost";
-$database = "lab9";
+$database = "GameX";
 $user     = "webuser";
 $password = "P@ssw0rd";
 
