@@ -19,7 +19,8 @@
                 <li><a href="createpost.html">Make New Post</a></li>
 
 <?php
-    
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
 $host     = "localhost";
 $database = "GameX";
 $user     = "webuser";
@@ -76,7 +77,7 @@ else
 
     mysqli_close($connection);
 }
-
+        }
 
 
 

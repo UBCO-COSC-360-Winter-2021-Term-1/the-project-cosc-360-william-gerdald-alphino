@@ -19,24 +19,83 @@
                 <li><a href="editProfile.html">Edit your profile</a></li>
 
 <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        echo "<li><a href=\"logout.html\">Logout</a></li></ul></nav></header>";
-        echo "<h3>Profile Updated!</h3><br><br>";
-        echo "<a href=\"createPost.html\">Create a new post</a><br><br>";
-        echo "<a href=\"main.html\">Main Page</a><br><br>";
+        
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $host     = "localhost";
+    $database = "GameX";
+    $user     = "webuser";
+    $password = "P@ssw0rd";
+    
+    $connection = mysqli_connect($host, $user, $password, $database);
+    
+    $error = mysqli_connect_error();
+    if($error != null)
+    {
+      $output = "<p>Unable to connect to database!</p>";
+      exit($output);
     }
-
-    else if ($_SERVER["REQUEST_METHOD"] == "GET"){
-        echo "<h3>GET method is not supported!</h3>";
-    } 
-
-    else {
-        echo "<h3>ERROR!!</h3>";
+    else
+    {
+    
+        if (isset($_SERVER["REQUEST_METHOD"]) &&  $_SERVER["REQUEST_METHOD"] == "POST")
+        {
+          if (isset($_POST["username"]))
+            $user_name = $_POST["username"];
+          if (isset($_POST["oldpassword"]))
+            $oldpassword = $_POST["oldpassword"];
+    
+          if (isset($_POST["newpassword"]))
+              $newpassword = $_POST["newpassword"];
+    
+    
+    
+            $password_hash = md5($oldpassword);
+            $sql = "SELECT * FROM users where username = '$user_name' AND password = '$password_hash';";
+    
+            $results = mysqli_query($connection, $sql);
+    
+            if ($row = mysqli_fetch_assoc($results))
+            {
+              $sql = "UPDATE users SET password = md5('$newpassword') WHERE username = '$user_name';";
+                if (mysqli_query($connection, $sql))
+                {
+                  $count = mysqli_affected_rows($connection);
+                  echo "<p>The password for user $user_name has been updated</p>";
+                }
+    
+            }
+            else
+            {
+              echo "<p>Invalid username and/or password </p>";
+              if (isset($return_link))
+              {
+                echo '<a href="'.$return_link.'">Return to user entry</a>';
+              }
+            }
+            mysqli_free_result($results);
+    
+        }
+        else {
+          echo "<p>Bad information has been entered</p>";
+    
+        }
+    
+        mysqli_close($connection);
     }
-
-?>
-
-<footer>
-    </footer>
-</body>
-</html>
+        }
+    
+        else if ($_SERVER["REQUEST_METHOD"] == "GET"){
+            echo "<h3>GET method is not supported!</h3>";
+        } 
+    
+        else {
+            echo "<h3>ERROR!!</h3>";
+        }
+    
+    ?>
+    
+    <footer>
+        </footer>
+    </body>
+    </html>

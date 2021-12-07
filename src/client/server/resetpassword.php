@@ -18,10 +18,8 @@
                 <li><a href="editprofile.html">Edit your profile</a></li>
 
 <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        echo "<li><a href=\"login-signin.html\">Logout</a></li></ul></nav></header>";
-        echo "<h3>Reset instruction has been sent to ".$_POST["email"]."</h3><br><br>";
-        echo "<a href=\"main.html\">Go To Main Page</a><br><br>";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $host     = "localhost";
 $database = "GameX";
