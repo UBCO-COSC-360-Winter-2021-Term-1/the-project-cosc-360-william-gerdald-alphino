@@ -40,9 +40,9 @@
         echo "<h3>Account Created.</h3><br><br>";
         echo "<a href=\"login-signin.html\">Login Page</a>";
         $host     = "localhost";
-$database = "lab9";
-$user     = "webuser";
-$password = "P@ssw0rd";
+        $database = "GameX";
+        $user     = "webuser";
+        $password = "P@ssw0rd";
 
 $connection = mysqli_connect($host, $user, $password, $database);
 

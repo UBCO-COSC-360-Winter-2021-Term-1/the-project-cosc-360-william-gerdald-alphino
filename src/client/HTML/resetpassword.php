@@ -24,7 +24,7 @@
         echo "<a href=\"main.html\">Go To Main Page</a><br><br>";
 
 $host     = "localhost";
-$database = "lab9";
+$database = "GameX";
 $user     = "webuser";
 $password = "P@ssw0rd";
 
