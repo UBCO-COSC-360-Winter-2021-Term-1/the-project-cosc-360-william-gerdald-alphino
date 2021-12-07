@@ -15,7 +15,7 @@ function makeRed(inputDiv){
 }
 
 function makeClean(inputDiv){
-	inputDiv.style.borderColor="red";
+	inputDiv.style.borderColor="white";
 }
 
 window.onload = function() {
