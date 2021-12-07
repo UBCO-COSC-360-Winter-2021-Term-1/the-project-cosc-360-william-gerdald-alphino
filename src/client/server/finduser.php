@@ -20,9 +20,7 @@
 
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        echo "<li><a href=\"logout.html\">Logout</a></li></ul></nav></header>";
-        echo "<h3>User detail of ".$_POST["username"].": </h3><br><br>";
-        echo "<a href=\"admin.html\">Go To Previous Page</a><br><br>";
+
 
 $host     = "localhost";
 $database = "GameX";
