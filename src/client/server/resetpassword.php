@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <script type="text/javascript" src="scripts/validate.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <script type="text/javascript" src="../js/validate.js"></script>
     <title>Rest password</title>
 </head>
 <body>
@@ -13,9 +14,9 @@
         <h1>GameX</h1>
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="newpost.html">Make New Post</a></li>
-                <li><a href="editprofile.html">Edit your profile</a></li>
+                <li><a href="../HTML/main.html">Home</a></li>
+                <li><a href="../HTML/newpost.html">Make New Post</a></li>
+                <li><a href="../HTML/editprofile.html">Edit your profile</a></li>
 
 <?php
 

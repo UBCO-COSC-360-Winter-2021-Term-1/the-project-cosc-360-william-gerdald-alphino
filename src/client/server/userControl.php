@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/form.css">
-    <script type="text/javascript" src="scripts/validate.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <script type="text/javascript" src="../js/validate.js"></script>
     <title>Admin</title>
 </head>
 <body>
@@ -15,8 +15,8 @@
         <h1>GameX</h1>
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="createpost.html">Make New Post</a></li>
+                <li><a href="../HTML/main.html">Home</a></li>
+                <li><a href="../HTML/createpost.html">Make New Post</a></li>
 
 <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {

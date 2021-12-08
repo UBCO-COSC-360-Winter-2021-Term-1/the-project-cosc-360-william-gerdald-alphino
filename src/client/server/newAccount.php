@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/form.css">
     <script type="text/javascript" src="../js/validate.js"></script>
     <script>
         function checkPasswordMatch(e){
@@ -28,9 +28,9 @@
         <h1>GameX</h1>
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="newAccount.html">Create an account</a></li>
-                <li><a href="login-signin.html">Login</a></li>
+                <li><a href="../HTML/main.html">Home</a></li>
+                <li><a href="../HTML/newAccount.html">Create an account</a></li>
+                <li><a href="../HTML/login-signin.html">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +38,7 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<h3>Account Created.</h3><br><br>";
-        echo "<a href=\"login-signin.html\">Login Page</a>";
+        echo "<a href=\"../HTML/login-signin.html\">Login Page</a>";
         $host     = "localhost";
         $database = "GameX";
         $user     = "webuser";
