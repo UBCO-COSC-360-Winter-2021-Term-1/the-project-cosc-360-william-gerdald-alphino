@@ -116,62 +116,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <li><a href="main.html">Home</a></li>
         <li><a href="createpost.html">Make New Post</a></li>
         <li><a href="editProfile.html">Edit your profile</a></li>
-
+        <p>Please fill in your credentials to login.</p>
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-          $host     = "localhost";
-          $database = "GameX";
-          $user     = "webuser";
-          $password = "P@ssw0rd";
-
-          $connection = mysqli_connect($host, $user, $password, $database);
-
-          $error = mysqli_connect_error();
-          if ($error != null) {
-            $output = "<p>Unable to connect to database!</p>";
-            exit($output);
-          } else {
-
-            if (isset($_SERVER["REQUEST_METHOD"]) &&  $_SERVER["REQUEST_METHOD"] == "POST") {
-              if (empty($username)) {
-                array_push($errors, "Username is required");
-              }
-              if (empty($password)) {
-                array_push($errors, "Password is required");
-              }
-              if (isset($_POST["username"]))
-                $user_name = $_POST["username"];
-              if (isset($_POST["password"]))
-                $password = $_POST["password"];
-              $password_hash = md5($password);
-              $sql = "SELECT * FROM users where username = '$user_name' AND password = '$password_hash';";
-
-              $results = mysqli_query($connection, $sql);
-
-              if ($row = mysqli_fetch_assoc($results)) {
-                echo "<p>This user has a valid account<p>";
-              } else {
-                echo "<p>Invalid username and/or password </p>";
-                if (isset($return_link)) {
-                  echo '<a href="' . $return_link . '">Return to user entry</a>';
-                }
-              }
-              mysqli_free_result($results);
-            } else {
-              echo "<p>Bad information has been entered</p>";
-            }
-
-            mysqli_close($connection);
-          }
-        } else if ($_SERVER["REQUEST_METHOD"] == "GET") {
-          echo "<h3>GET method is not supported!</h3>";
-        } else {
-          echo "<h3>ERROR!!</h3>";
+        if (!empty($login_err)) {
+          echo '<div class="alert alert-danger">' . $login_err . '</div>';
         }
-
         ?>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+            <span class="invalid-feedback">
+            <?php echo $username_err; ?></span>
 
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+            <span class="invalid-feedback">
+            <?php echo $password_err; ?></span>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Login">
+          </div>
+          <p>Create an account? <a href="newAccount.php"></a>.</p>
+        </form>
 
 </body>
 
