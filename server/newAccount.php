@@ -10,7 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-
+    $firstname = $_POST['firstName'];
+    $lastname = $_POST['lastName'];
 
 
     $userExists = false;
@@ -52,8 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $registrationSuccessful = true;
       }
     }
-
-    $mysqli->close(); // close the connection
+    mysqli_close($mysqli);
 
   }
 }
