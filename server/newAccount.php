@@ -39,16 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
       // INSERT NEW USER INTO DB
-      if ($stmt = $mysqli->prepare("INSERT INTO users(username, email, password, profile_image_path, is_admin, is_banned, bio, location) VALUES (?,?,?,?,?,?,?,?)")) {
+      if ($stmt = $mysqli->prepare("INSERT INTO users(username, email, password) VALUES (?,?,?,?,?)")) {
 
         $password = md5($password); // hash the password
 
-        // bind params
-        $profile_image_path = " ";
-        $is_admin = 0;
-        $is_banned = 0;
-        $bio = "No bio set.";
-        $location = "No location set.";
         $stmt->bind_param("ss", $username, $email, $password);
 
         // execute insert
