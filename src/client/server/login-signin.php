@@ -20,10 +20,7 @@
 
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        echo "<li><a href=\"logout.html\">Logout</a></li></ul></nav></header>";
-        echo "<h3>You are now logged in!</h3><br><br>";
-        echo "<a href=\"createPost.html\">Create a new Post</a><br><br>";
-        echo "<a href=\"editProfile.html\">Edit your profile</a><br><br>";
+
         $host     = "localhost";
         $database = "GameX";
         $user     = "webuser";
