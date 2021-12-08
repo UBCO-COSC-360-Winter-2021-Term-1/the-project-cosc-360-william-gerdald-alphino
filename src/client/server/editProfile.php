@@ -14,9 +14,9 @@
         <h1>GameX</h1>
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="createPost.html">Create Post</a></li>
-                <li><a href="editProfile.html">Edit your profile</a></li>
+                <li><a href="../HTML/main.html">Home</a></li>
+                <li><a href="../HTML/createPost.html">Create Post</a></li>
+                <li><a href="../HTML/editProfile.html">Edit your profile</a></li>
 
 <?php
         
