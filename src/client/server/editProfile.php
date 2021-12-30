@@ -22,11 +22,6 @@
   session_start();      
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $host     = "localhost";
-    $database = "GameX";
-    $user     = "webuser";
-    $password = "P@ssw0rd";
-    
     $connection = mysqli_connect($host, $user, $password, $database);
     
     $error = mysqli_connect_error();
