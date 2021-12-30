@@ -9,8 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $connection = mysqli_connect($host, $user, $password, $database);
     $error = mysqli_connect_error();
     if ($error != null) {
-        $output = "<p>Unable to connect to database!</p>";
-        exit($output);
+        $output = "<p>error with database</p>";
+        die($output);
     } else {
        
         $sql = $connection->prepare("SELECT username, email FROM users WHERE username = '$username'");
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $entered = $complete->fetch_assoc();
 
         while ($entered) {
-          $sql = "DELETE FROM user WHERE  $entered['username']";
+          $sql = "DELETE FROM user WHERE username= $entered[username]";
 
 if ($conn->query($sql) === TRUE) {
  
@@ -27,10 +27,12 @@ if ($conn->query($sql) === TRUE) {
     } else {
    echo "Error deleting record: " . $conn->error;
       }
-            mysqli_free_result($complete);
-            mysqli_close($connection);
-            die;
-        }
+    
+
+      mysqli_free_result($complete);
+      mysqli_close($connection);
+      die;
+  }
         echo "cannot find user";
         mysqli_free_result($complete);
         mysqli_close($connection);

@@ -1,3 +1,19 @@
+<?php
+
+  session_start();
+
+    if (isset($_SESSION["username"]))
+    {
+        $logged_in  = true;
+    }
+    else
+    {
+        $logged_in = false;
+    }
+
+    if (!$logged_in)
+    {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +27,19 @@
 <body>
     <header id="masthead">
         <h1>GameX</h1>
+
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="login-signin.html">Logout</a></li>
+                <li><a href="../HTML/main1.php">Home</a></li>
+                <li><a href="../HTML/logout.html">Logout</a></li>
             </ul>
         </nav>
     </header>
 
     <h3>New Post!</h3>
-    <form method="post" action="newpost.php" id="form" >
+    <form method="post" action="../server/newpost.php" id="form" >
+        Author:
+        <input type="text" name="author" id="author"><br>
         Category:
         <select name="category" id="category">
             <option value="Shooting">Shooting</option>
@@ -29,9 +48,7 @@
             <option value="Simulation">Simulation</option>
             <option value="Indie">Indie</option>
         </select>
-        <br><br>
-        Title:<br>
-        <input type="text" name="title" id="title"><br>
+        <br>
         <textarea name="textarea" id="textarea" cols="125" rows="20"></textarea><br><br>
         <br><br>
         <input type="submit" value="Post" id="submit"><br><br>
@@ -41,3 +58,12 @@
     </footer>
 </body>
 </html>
+<?php
+    }
+    else
+    {
+
+        header("Location: main.html");
+        exit();
+    }
+?>

@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $username = $_POST["username"];
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $host = "localhost";

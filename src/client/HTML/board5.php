@@ -1,10 +1,26 @@
+<?php
+
+  session_start();
+
+    if (isset($_SESSION["username"]))
+    {
+        $logged_in  = true;
+    }
+    else
+    {
+        $logged_in = false;
+    }
+
+    if (!$logged_in)
+    {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Game Thread
+    <title>Simmulation Game Thread
     </title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/form.css">
@@ -27,14 +43,13 @@
     </div>
 
     <div id="post">
-        <img src="../img/ftl.jpeg" alt="image2">
+        <img src="../img/sims.jpeg" alt="image1">
         <div>
-            <h3>This is a space game</h3>
+            <h3>This is image 1</h3>
             <span>By Alvin</span>
             <span> Dec 3, 2021</span>
 <p>
-    fun game
-</p>
+I cant stop playing this game</p>
         </div>
     </div>
 
@@ -42,13 +57,13 @@
 
     <div id="comments-section">
         <div class="comment">
-            <h4>Elvin</h4>
-            <p>Worth the purchase!</p>
+            <h4 id='author'>Elvin</h4>
+            <p id='post'>Really is it worth the purchase?</p>
             
         </div>
         <div class="comment">
             <h4>Allvin</h4>
-            <p>Gonna buy it</p>
+            <p>I think so im  gonna buy it</p>
             
         </div>
         <div class="comment">
@@ -57,8 +72,16 @@
             
         </div>
     </div>
-
     <footer>
     </footer>
 </body>
 </html>
+<?php
+    }
+    else
+    {
+
+        header("Location: main.html");
+        exit();
+    }
+?>

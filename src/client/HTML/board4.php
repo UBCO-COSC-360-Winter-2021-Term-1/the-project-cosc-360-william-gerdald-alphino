@@ -1,3 +1,19 @@
+<?php
+
+  session_start();
+
+    if (isset($_SESSION["username"]))
+    {
+        $logged_in  = true;
+    }
+    else
+    {
+        $logged_in = false;
+    }
+
+    if (!$logged_in)
+    {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,8 +57,8 @@ Spooooooooooooky</p>
 
     <div id="comments-section">
         <div class="comment">
-            <h4>Elvin</h4>
-            <p>Hard pass</p>
+            <h4 id='author'>Elvin</h4>
+            <p id='post'>Hard pass</p>
             
         </div>
         <div class="comment">
@@ -61,3 +77,12 @@ Spooooooooooooky</p>
     </footer>
 </body>
 </html>
+<?php
+    }
+    else
+    {
+
+        header("Location: main.html");
+        exit();
+    }
+?>

@@ -19,7 +19,7 @@
                 <li><a href="editProfile.html">Edit your profile</a></li>
 
 <?php
-        
+  session_start();      
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $host     = "localhost";
@@ -67,17 +67,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             else
             {
-              echo "<p>Invalid username and/or password </p>";
+              echo "<p>Invalid info </p>";
               if (isset($return_link))
               {
-                echo '<a href="'.$return_link.'">Return to user entry</a>';
+                echo '<a href="'.$return_link.'">Return</a>';
               }
             }
             mysqli_free_result($results);
     
         }
         else {
-          echo "<p>Bad information has been entered</p>";
+          echo "<p>wrong login</p>";
     
         }
     

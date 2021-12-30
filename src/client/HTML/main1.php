@@ -1,11 +1,19 @@
-
 <?php
-session_start();
 
-if (isset($_SESSION["username"]))
-{
+  session_start();
+
+    if (isset($_SESSION["username"]))
+    {
+        $logged_in  = true;
+    }
+    else
+    {
+        $logged_in = false;
+    }
+
+    if (!$logged_in)
+    {
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,10 +29,13 @@ if (isset($_SESSION["username"]))
 <body>
     <header id="masthead">
         <h1>GameX Gaming Blog</h1>
+        <?php
+        ?>
         <nav>
             <ul>
-                <li><a href="../HTML/main.html">Home</a></li>
-                <li><a href="../HTML/editProfile.html">ViewProfile</a></li>
+                <li><a href="../HTML/main1.php">Home</a></li>
+                <li><a href="../HTML/createPost.php">Post</a></li>
+                <li><a href="../HTML/editProfile.php">ViewProfile</a></li>
                 <li><a href="../HTML/logout.html">Logout</a></li>
             </ul>
         </nav>
@@ -37,7 +48,7 @@ if (isset($_SESSION["username"]))
                     <h3>Sports Game</h3>
                     <span>EA Studio</span>
                     <p>If youre a soccer fan this game is for you</p>
-                    <a href="board3.html"><h6>Read More</h6></a>
+                    <a href="../HTML/board3.php"><h6>Read More</h6></a>
                 </div>
             </article>
             <article>
@@ -46,7 +57,7 @@ if (isset($_SESSION["username"]))
                     <h3>Shooting Game</h3>
                     <span>Trinity Studio</span>
                     <p>We swear we fixed all the problems this time.</p>
-                    <a href="board1.html"><h6>Read More</h6></a>
+                    <a href="../HTML/board1.php"><h6>Read More</h6></a>
                 </div>
             </article>
             <article>
@@ -55,7 +66,7 @@ if (isset($_SESSION["username"]))
                     <h3>Adventure Hero</h3>
                     <span>Super Studio</span>
                     <p>Ever wanted to become a superhero?</p>
-                    <a href="board5.html"><h6>Read More</h6></a>
+                    <a href="../HTML/board5.php"><h6>Read More</h6></a>
                 </div>
             </article>
             <article>
@@ -64,7 +75,7 @@ if (isset($_SESSION["username"]))
                     <h3>Space Simulations</h3>
                     <span>slimeMakers</span>
                     <p>Live your fantasy life!</p>
-                    <a href="board2.html"><h6>Read More</h6></a>
+                    <a href="../HTML/board2.php"><h6>Read More</h6></a>
                 </div>
             </article>
             <article>
@@ -73,7 +84,7 @@ if (isset($_SESSION["username"]))
                     <h3>Horror Forest</h3>
                     <span>Creepsters</span>
                     <p>Winner of the horror game award 2021</p>
-                    <a href="board4.html"><h6>Read More</h6></a>
+                    <a href="../HTML/board4.php"><h6>Read More</h6></a>
                 </div>
             </article>
         </section>
@@ -118,12 +129,12 @@ if (isset($_SESSION["username"]))
     </footer>
 </body>
 </html>
-
 <?php
     }
     else
     {
-        header("Location: ../server/login-signin.php");
+
+        header("Location: main.html");
         exit();
     }
 ?>

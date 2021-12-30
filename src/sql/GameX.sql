@@ -53,6 +53,20 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`username`),
   ADD UNIQUE KEY `email` (`email`);
 
+-- Table for 'posts'
+CREATE TABLE `comments` (
+			`author` varchar(255) NOT NULL,
+			`category` varchar(255) NOT NULL,
+			`post` VARCHAR(255) NOT NULL 
+		  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`author`, `category`,`post`) VALUES
+('betatester',  'sports','this is a test');
+    
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

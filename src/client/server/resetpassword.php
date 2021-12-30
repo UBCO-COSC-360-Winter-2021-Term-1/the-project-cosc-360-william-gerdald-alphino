@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $username = $_POST["username"];
 $oldpassword = md5($_POST["oldpassword"]);
 $newpassword = md5($_POST["newpassword"]);
@@ -22,18 +23,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         while ($entered) {
             $sql = $connection->prepare("UPDATE users SET password = '$newpassword' WHERE username = '$username' and password = '$oldpassword'");
             if ($sql->execute()) {
-                echo "changed password succesfully";
+                echo "password has been changed";
                 mysqli_free_result($complete);
                 mysqli_close($connection);
                 die;
             }
         }
-        echo "cannot change password";
+        echo "error with password change";
         mysqli_free_result($complete);
         mysqli_close($connection);
         die;
     }
 }
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
-    die("Unable to get data!");
+    die("cant get data!");
 }

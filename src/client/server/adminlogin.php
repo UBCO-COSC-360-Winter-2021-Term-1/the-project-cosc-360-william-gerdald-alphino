@@ -2,7 +2,7 @@
 <html>
 <body>
 <?php
-
+session_start();
 $host     = "localhost";
 $database = "gamex";
 $user     = "webuser";

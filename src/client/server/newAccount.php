@@ -2,7 +2,7 @@
 <html>
 <body>
 <?php
-
+session_start();
 $host     = "localhost";
 $database = "gamex";
 $user     = "webuser";
@@ -48,7 +48,7 @@ else
           }
         }
         else {
-          $sql = "INSERT INTO users (username, email, password) values ('$user_name','$email','$password');";
+          $sql = "INSERT INTO users (username, email, password) values ('$user_name','$email', md5('$password'));";
             if (mysqli_query($connection, $sql))
             {
               $count = mysqli_affected_rows($connection);

@@ -1,3 +1,19 @@
+<?php
+
+  session_start();
+
+    if (isset($_SESSION["username"]))
+    {
+        $logged_in  = true;
+    }
+    else
+    {
+        $logged_in = false;
+    }
+
+    if (!$logged_in)
+    {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +28,10 @@
 <body>
     <header id="masthead">
         <h1>GameX</h1>
+
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
+                <li><a href="main1.php">Home</a></li>
                 <li><a href="login-signin.html">Logout</a></li>
             </ul>
         </nav>
@@ -55,3 +72,12 @@
     </footer>
 </body>
 </html>
+<?php
+    }
+    else
+    {
+
+        header("Location: main.html");
+        exit();
+    }
+?>
