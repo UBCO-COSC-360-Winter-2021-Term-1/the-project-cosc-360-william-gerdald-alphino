@@ -39,7 +39,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`username`, `email`, `password`) VALUES
 ('valvin',  'alvin@email.com', 'P@ssword!');
-
+('will', 'wil@email.com', 'P@ssword'); 
+('Neo' ,'Neo@email.com', 'password!'); 
+('Gerald' ,'G@gmail.com', 'password1');
 --
 -- Indexes for dumped tables
 --
