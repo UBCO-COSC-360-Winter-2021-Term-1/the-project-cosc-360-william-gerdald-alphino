@@ -11,7 +11,6 @@ session_start();
 
 	$sql="CREATE TABLE users (
 		username varchar(255) NOT NULL,
-	
 		email varchar(255) NOT NULL,
 		pasword VARCHAR(70) NOT NULL UNIQUE
 	  ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
@@ -19,7 +18,6 @@ session_start();
 	  	$sql="CREATE TABLE comments (
 			author varchar(255) NOT NULL,
 			category varchar(255) NOT NULL,
-			title varchar(255) NOT NULL,
 			post VARCHAR(255) NOT NULL 
 		  ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
 		  
