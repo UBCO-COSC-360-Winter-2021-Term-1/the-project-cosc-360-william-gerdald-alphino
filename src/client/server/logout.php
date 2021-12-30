@@ -3,9 +3,9 @@
 session_start();
  
 if (isset($_SESSION['username'])) {
-    unset($_SESSION['username']); // log the user out
-    header('Location: ' . $_SERVER['HTTP_REFERER']); // re direct to last page
+    unset($_SESSION['username']);
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 } else {
-    header('Location: login.php'); // user is not logged in, redirect
+    header('Location: login.php'); 
 }
 ?>

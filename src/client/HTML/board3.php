@@ -58,7 +58,7 @@ I love soccer</p>
     <div id="comments-section">
         <div class="comment">
             <h4 id='author'>Elvin</h4>
-            <p id=post>What teams are included</p>
+            <p id=comments>What teams are included</p>
             
         </div>
         <div class="comment">
