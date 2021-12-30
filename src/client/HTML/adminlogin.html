@@ -1,0 +1,30 @@
+<html>
+<head>
+
+<script type="text/javascript" src="scripts/validate.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/form.css">
+</script>
+</head>
+<header>
+    <h1>GameX Gaming Blog</h1>
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+
+        </ul>
+    </nav>
+</header>
+<body>
+
+<form method="post" action="../server/adminlogin.php" id="mainForm" >
+  Admin user:<br>
+  <input type="text" name="username" id="username" class="required">
+  <br>
+  Admin pass:<br>
+  <input type="password" name="password" id="password" class="required">
+  <br>
+
+  <input type="submit" value="Login">
+</form>
+</body>

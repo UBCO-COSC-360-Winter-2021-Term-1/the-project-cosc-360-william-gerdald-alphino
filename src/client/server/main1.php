@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+
+if (isset($_SESSION["username"]))
+{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +23,9 @@
         <h1>GameX Gaming Blog</h1>
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="newAccount.html">Create an account</a></li>
-                <li><a href="login-signin.html">Login</a></li>
-                <li><a href="adminlogin.html">admin only</a></li>
+                <li><a href="../HTML/main.html">Home</a></li>
+                <li><a href="../HTML/editProfile.html">ViewProfile</a></li>
+                <li><a href="../HTML/logout.html">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -111,3 +118,12 @@
     </footer>
 </body>
 </html>
+
+<?php
+    }
+    else
+    {
+        header("Location: ../server/login-signin.php");
+        exit();
+    }
+?>
