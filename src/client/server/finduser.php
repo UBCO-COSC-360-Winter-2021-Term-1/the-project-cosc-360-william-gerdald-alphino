@@ -2,7 +2,7 @@
 $username = $_POST["username"];
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $host = "localhost";
-    $database = "lab9";
+    $database = "gameX";
     $user = "webuser";
     $password = "P@ssw0rd";
 
