@@ -1,6 +1,4 @@
 <?php 
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
 $email = $_POST['email'];
 $username = $_POST['username'];
 $password = md5($_POST['password']);
