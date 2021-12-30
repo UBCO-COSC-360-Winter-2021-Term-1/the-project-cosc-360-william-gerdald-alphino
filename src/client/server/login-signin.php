@@ -3,7 +3,7 @@ $username = $_POST["username"];
 $password = md5($_POST["password"]);
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $host = "localhost";
-    $database = "gameX";
+    $database = "gamex";
     $user = "webuser";
     $password = "P@ssw0rd";
 

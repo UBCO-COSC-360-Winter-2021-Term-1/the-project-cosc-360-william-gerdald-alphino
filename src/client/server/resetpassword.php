@@ -4,7 +4,7 @@ $oldpassword = md5($_POST["oldpassword"]);
 $newpassword = md5($_POST["newpassword"]);
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $host = "localhost";
-    $database = "gameX";
+    $database = "gamex";
     $user = "webuser";
     $password = "P@ssw0rd";
 
