@@ -2,12 +2,13 @@
 session_start();
 	/* DATABASE CONNECTION INFORMATION */
 
-	$DBHOST = "cosc360.ok.ubc.ca";
-	$DBNAME = "cosc360";
-	$DBUSER = "94461811";
-	$DBPASSWORD = "94461811";
+	$host = "cosc360.ok.ubc.ca";
+	$database = "cosc360";
+	$user = "94461811";
+	$password = "94461811";
 
-	$mysqli = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
+	$connection = mysqli_connect($host, $user, $password, $database);
+
 
 	$sql="CREATE TABLE users (
 		username varchar(255) NOT NULL,
