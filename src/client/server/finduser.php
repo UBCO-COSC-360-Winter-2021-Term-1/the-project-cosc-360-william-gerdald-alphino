@@ -41,4 +41,3 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
     die("Unable to get data!");
 }
-s
