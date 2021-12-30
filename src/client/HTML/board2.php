@@ -1,17 +1,7 @@
 <?php
-
-  session_start();
+    session_start();
 
     if (isset($_SESSION["username"]))
-    {
-        $logged_in  = true;
-    }
-    else
-    {
-        $logged_in = false;
-    }
-
-    if (!$logged_in)
     {
 ?>
 <!DOCTYPE html>
