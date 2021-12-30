@@ -61,11 +61,11 @@ CREATE TABLE `comments` (
 -- Dumping data for table `post`
 --
 
-INSERT INTO `post` (`author`, `category`,`post`) VALUES
+INSERT INTO `comments` (`author`, `category`,`post`) VALUES
 ('betatester',  'sports','this is a test');
 
 
-ALTER TABLE `post` ADD PRIMARY KEY (`author`);
+ALTER TABLE `comments` ADD PRIMARY KEY (`author`);
     
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
