@@ -7,7 +7,7 @@
 	$DBUSER = "94461811";
 	$DBPASSWORD = "94461811";
 
-	$mysqli = mysqli_connect($host, $user, $password, $database);
+	$mysqli = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
 	$sql="CREATE TABLE users (
 		username varchar(255) NOT NULL,
