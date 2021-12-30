@@ -1,10 +1,14 @@
 <?php 
 session_start();
 $username = $_POST["username"];
+// $host     = "localhost";
+// $database = "gamex";
+// $user     = "valvin";
+// $password = "P@ssword!";
 $host = "localhost";
-$database = "gamex";
-$user = "webuser";
-$password = "P@ssw0rd";
+$database = "db_94461811";
+$user = "db_94461811";
+$sqlpassword = "db_94461811";
 
 $connection = mysqli_connect($host, $user, $password, $database);
 $error = mysqli_connect_error();

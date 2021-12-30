@@ -2,10 +2,14 @@
 session_start();
 	/* DATABASE CONNECTION INFORMATION */
 
-	$host = "cosc360.ok.ubc.ca";
-	$database = "cosc360";
-	$user = "94461811";
-	$password = "94461811";
+// $host     = "localhost";
+// $database = "gamex";
+// $user     = "valvin";
+// $password = "P@ssword!";
+$host = "localhost";
+$database = "db_94461811";
+$user = "db_94461811";
+$sqlpassword = "db_94461811";
 
 	$connection = mysqli_connect($host, $user, $password, $database);
 

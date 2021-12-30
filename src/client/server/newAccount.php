@@ -3,10 +3,14 @@
 <body>
 <?php
 
-$host     = "localhost";
-$database = "gamex";
-$user     = "webuser";
-$password = "P@ssw0rd";
+// $host     = "localhost";
+// $database = "gamex";
+// $user     = "valvin";
+// $password = "P@ssword!";
+$host = "localhost";
+$database = "db_94461811";
+$user = "db_94461811";
+$sqlpassword = "db_94461811";
 
 $connection = mysqli_connect($host, $user, $password, $database);
 

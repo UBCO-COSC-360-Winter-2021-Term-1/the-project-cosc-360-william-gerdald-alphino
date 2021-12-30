@@ -1,11 +1,14 @@
 <?php 
 $username = $_POST["username"];
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $host     = "localhost";
-    $database = "gamex";
-    $user     = "webuser";
-    $password = "P@ssw0rd!";
-
+// $host     = "localhost";
+// $database = "gamex";
+// $user     = "valvin";
+// $password = "P@ssword!";
+$host = "localhost";
+$database = "db_94461811";
+$user = "db_94461811";
+$sqlpassword = "db_94461811";
     $connection = mysqli_connect($host, $user, $password, $database);
     $error = mysqli_connect_error();
     if ($error != null) {
@@ -40,5 +43,5 @@ if ($conn->query($sql) === TRUE) {
     }
 }
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
-    die("Unable to get data!");
+    die("Unable to get data");
 }
