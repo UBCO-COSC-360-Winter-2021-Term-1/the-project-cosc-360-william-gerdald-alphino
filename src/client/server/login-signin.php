@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         while ($entered){
             echo "WELCOME " . $entered['username'] . "!";
-            header("Location: ../HTML/main.html");
+            header("Location: main.html");
             mysqli_free_result($complete);
             mysqli_close($connection);
             die; 
