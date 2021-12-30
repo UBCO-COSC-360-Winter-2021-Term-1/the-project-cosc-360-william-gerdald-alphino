@@ -13,7 +13,7 @@ $connection = mysqli_connect($host, $user, $password, $database);
 $error = mysqli_connect_error();
 if($error != null)
 {
-  header("Location: ../html/main1.php");
+  header("Location: ../html/main.html");
     die("Unable to connect to database");}
 else
 {
