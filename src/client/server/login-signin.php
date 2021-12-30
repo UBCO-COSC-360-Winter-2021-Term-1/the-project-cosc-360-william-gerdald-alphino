@@ -38,7 +38,7 @@ else
         }
         else
         {
-          echo "<p>Invalid login </p>";
+          echo "<p>Bad login </p>";
           if (isset($return_link))
           {
             echo '<a href="'.$return_link.'">Go Back</a>';

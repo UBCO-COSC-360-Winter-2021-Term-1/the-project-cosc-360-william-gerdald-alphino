@@ -40,10 +40,10 @@ else
 
         if ($row = mysqli_fetch_assoc($results))
         {
-          echo "<p>User already exists with this name and/or email<p>";
+          echo "<p>User  exists <p>";
           if (isset($return_link))
           {
-            echo '<a href="'.$return_link.'">Return to user entry</a>';
+            echo '<a href="'.$return_link.'">Go Back</a>';
           }
         }
         else {
@@ -57,7 +57,7 @@ else
 
     }
     else {
-      echo "<p>Bad inf</p>";
+      echo "<p>Bad info</p>";
       if (isset($return_link))
       {
         echo '<a href="'.$return_link.'">Go Back</a>';
