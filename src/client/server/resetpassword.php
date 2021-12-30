@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $connection = mysqli_connect($host, $user, $password, $database);
     $error = mysqli_connect_error();
     if ($error != null) {
-        $output = "<p>Unable to connect to database!</p>";
+        $output = "<p>Cant access database</p>";
         exit($output);
     } else {
         $sql = $connection->prepare("SELECT username FROM users WHERE username = '$username' and password = '$oldpassword'");
@@ -29,12 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 die;
             }
         }
-        echo "error with password change";
+        echo "error with pasword";
         mysqli_free_result($complete);
         mysqli_close($connection);
         die;
     }
 }
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
-    die("cant get data!");
+    die("fatal error");
 }

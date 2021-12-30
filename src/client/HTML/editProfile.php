@@ -38,17 +38,10 @@
     </header>
     <hr>
     <form method="post" action="editProfile.php" id="form" >
-        Old username:<br>
-        <input type="text" name="old-username" id="old-username">
-        <br>
-        New username:<br>
-        <input type="text" name="new-username" id="new-username">
+    username:<br>
+        <input type="text" name="username" id="username">
         <br><br>
-        Old E-mail:<br>
-        <input type="email" name="old-email" id="old-email">
-        <br>
-        New E-mail:<br>
-        <input type="email" name="new-email" id="new-email">
+     >
         <br><br>
         Old Password:<br>
         <input type="text" name="old-password" id="old-password">
@@ -64,9 +57,7 @@
         <br><br>
     </form>
     <hr><br>
-    <form method="post" action="close-account.php" id="form" >
-        <input type="submit" value="Close your account">
-    </form>
+  
     <br><br>
     <footer>
     </footer>
