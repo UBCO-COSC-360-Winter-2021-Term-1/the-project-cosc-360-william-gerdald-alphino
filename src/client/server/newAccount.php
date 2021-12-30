@@ -1,101 +1,33 @@
-<?php
-require 'config.php';
+<?php 
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$email = $_POST['email'];
+$username = $_POST['username'];
+$password = md5($_POST['password']);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-$registrationSuccessful = false;
+    $host = "localhost";
+    $database = "lab9";
+    $user = "webuser";
+    $password = "P@ssw0rd";
+    $connection = mysqli_connect($host, $user, $password, $database);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-  if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password'])) {
-
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $firstname = $_POST['firstName'];
-    $lastname = $_POST['lastName'];
-
-
-    $userExists = false;
-
-    // prepare the statement to check if there already exists a user
-    if ($stmt = $mysqli->prepare("SELECT * FROM users WHERE username=? OR email=?")) {
-
-      // bind parameters
-      $stmt->bind_param("ss", $username, $email);
-
-      // execute query
-      $stmt->execute();
-
-
-      // checks if a user already exists
-      while ($stmt->fetch()) {
-        $userExists = true;
-        break; // only display the above once
-      }
-
-      $stmt->close(); // close the statement
+    $error = mysqli_connect_error();
+    if ($error != null) {
+        $output = "<p>Unable to connect to database!</p>";
+        exit($output);
+    } else {
+       
+        $sql1 = $connection->prepare("INSERT INTO users(username, firstname, lastname, email, password) VALUE ('$username', '$firstname','$lastname','$email', '$password')");
+        if ($sql1->execute()) {
+            echo "user created";
+        } else {
+            echo "user already exists";
+        }
+        mysqli_close($connection);
+        die;
     }
-
-    // insert the user
-    if (!$userExists) {
-
-
-      // INSERT NEW USER INTO DB
-      if ($stmt = $mysqli->prepare("INSERT INTO users(username, email, password) VALUES (?,?,?,?,?)")) {
-
-        $password = md5($password); // hash the password
-
-        $stmt->bind_param("ss", $username, $email, $password);
-
-        // execute insert
-        $stmt->execute();
-        $stmt->close();
-
-        $registrationSuccessful = true;
-      }
-    }
-    mysqli_close($mysqli);
-
-  }
+} else if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    die("did not get data yet");
 }
-
 ?>
-<!DOCTYPE html>
-<html>
-
-<head lang="en">
-  <meta charset="utf-8">
-  <title>R3DLINE</title>
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="style/all.css" />
-  <link rel="stylesheet" href="style/about.css" />
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-</head>
-
-<body>
-  <header>
-    <a href="home.php" id="logo"><img src="images/logo.png" width="300" height="42" /></a>
-    <ul>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="register.html">Register</a></li>
-    </ul>
-  </header>
-  <article>
-    <div id="container">
-      <?php if ($registrationSuccessful) : ?>
-        <h2>Registration Successful</h2>
-        <p>Account for user "<?= $username ?>" successfully created!</p>
-        <p><a href="login.html">Proceed to login page.</a></p>
-      <?php else : ?>
-        <h2>Error</h2>
-        <p>A user with that username and/or email already exists!</p>
-        <p><a href="register.html">Back to Registration Page</a></p>
-      <?php endif ?>
-    </div>
-  </article>
-
-  <footer>
-    <p>© Colin Bernard 2017</p>
-  </footer>
-</body>
-
-</html>

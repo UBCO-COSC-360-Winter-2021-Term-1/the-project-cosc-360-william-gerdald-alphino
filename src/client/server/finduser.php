@@ -2,7 +2,7 @@
 $username = $_POST["username"];
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $host = "localhost";
-    $database = "GameX";
+    $database = "lab9";
     $user = "webuser";
     $password = "P@ssw0rd";
 
@@ -42,3 +42,4 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
     die("Unable to get data!");
 }
+s
