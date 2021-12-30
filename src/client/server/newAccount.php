@@ -18,14 +18,15 @@ if($error != null)
 }
 else
 {
+
     if (isset($_SERVER["REQUEST_METHOD"]) &&  $_SERVER["REQUEST_METHOD"] == "POST")
     {
 
       if (isset($_POST["username"]))
- 
+
         $user_name = $_POST["username"];
       if (isset($_POST["email"]))
-  
+
         $email = $_POST["email"];
       if (isset($_POST["password"]))
 
@@ -52,18 +53,15 @@ else
             {
               $count = mysqli_affected_rows($connection);
               echo "<p>An account for the user $user_name has been created</p>";
+              header("Location: main.html");
             }
         }
         mysqli_free_result($results);
 
     }
     else {
-  
       echo "<p>Bad information has been entered</p>";
-      if (isset($return_link))
-      {
-        echo '<a href="'.$return_link.'">Return to user entry</a>';
-      }
+
     }
 
     mysqli_close($connection);
