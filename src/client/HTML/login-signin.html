@@ -1,35 +1,32 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/form.css">
+
+<script type="text/javascript" src="scripts/validate.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/form.css">
+</script>
 </head>
-<body>
+<header>
+    <h1>GameX Gaming Blog</h1>
     <nav>
         <ul>
             <li><a href="main.html">Home</a></li>
-            <li><a href="login-signin.html">Login</a></li>
+            <li><a href="newAccount.html">Create an account</a></li>
+
         </ul>
     </nav>
+</header>
+<body>
 
-<form  method="POST" action="../server/login-signin.php" name="regform">
-    <div class="register">
-            <h1>GameX Sign in</h1>
-            <div>
-            <p>
-                welcome to GameX a discussion board to discuss about games and talk to other gamers
-            </p>
-        </div>
-                <label>Username: </label>
-                <input type="text" name="uname" id="uname"  placeholder="Enter Username">
-                <br>
-                <label>Password: </label>
-                <input type="password" name="password" id="password" placeholder="Enter Password">
-                <br>
-                <input type="submit" class="submit" name="submitreg" value="Login" />       
-				<input type="hidden" readonly><a class="register" href="resetpassword.html"> forgot password</a><br/><br/>	</input>
-
-    </div>
- 
+<form method="post" action="../server/login-signin.php" id="mainForm" >
+  Username:<br>
+  <input type="text" name="username" id="username" class="required">
+  <br>
+  Password:<br>
+  <input type="password" name="password" id="password" class="required">
+  <br>
+  <br><br>
+  <input type="submit" value="Login">
 </form>
 </body>
-</html>
