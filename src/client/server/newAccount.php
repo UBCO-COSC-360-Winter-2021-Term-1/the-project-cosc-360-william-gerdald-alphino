@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit($output);
     } else {
        
-        $sql1 = $connection->prepare("INSERT INTO users(username, firstname, lastname, email, password) VALUE ('$username', '$firstname','$lastname','$email', '$password')");
+        $sql1 = $connection->prepare("INSERT INTO users(username, email, password) VALUE ('$username', '$email', '$password')");
         if ($sql1->execute()) {
             echo "user created";
         } else {
