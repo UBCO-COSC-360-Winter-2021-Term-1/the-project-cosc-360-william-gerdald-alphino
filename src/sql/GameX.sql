@@ -39,9 +39,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`username`, `email`, `password`) VALUES
 ('valvin',  'alvin@email.com', 'P@ssword!');
-('will', 'wil@email.com', 'P@ssword'); 
-('Neo' ,'Neo@email.com', 'password!'); 
-('Gerald' ,'G@gmail.com', 'password1');
+
 --
 -- Indexes for dumped tables
 --
@@ -65,6 +63,9 @@ CREATE TABLE `comments` (
 
 INSERT INTO `post` (`author`, `category`,`post`) VALUES
 ('betatester',  'sports','this is a test');
+
+
+ALTER TABLE `post` ADD PRIMARY KEY (`author`);
     
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
