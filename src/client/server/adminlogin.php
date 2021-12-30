@@ -5,11 +5,14 @@
 session_start();
 
 $connection = mysqli_connect($host, $user, $password, $database);
-$host     = "localhost";
-$database = "gamex";
-$user     = "valvin";
-$password = "P@ssword!";
-
+// $host     = "localhost";
+// $database = "gamex";
+// $user     = "valvin";
+// $password = "P@ssword!";
+$host = "localhost";
+$database = "db_94461811";
+$user = "db_94461811";
+$sqlpassword = "db_94461811";
 
 $error = mysqli_connect_error();
 if($error != null)
