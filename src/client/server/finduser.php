@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         exit($output);
     } else {
        
-        $sql = $connection->prepare("SELECT username, firstname, lastname, email FROM users WHERE username = '$username'");
+        $sql = $connection->prepare("SELECT username, email FROM users WHERE username = '$username'");
         $sql->execute();
         $complete = $sql->get_result();
         $entered = $complete->fetch_assoc();
@@ -24,8 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <fieldset>
             <legend>User: " . $entered['username'] . "</legend>
             <table>
-                <tr><td>First Name:</td><td>" . $entered['firstname'] . "</td></tr>
-                <tr><td>Last Name: </td><td>" . $entered['lastname'] . "</td></tr>
+                <tr><td>user name:</td><td>" . $entered['username'] . "</td></tr>
                 <tr><td>Email:</td><td>" . $entered['email'] . "</td></tr>
             </table>
             </fieldset>";

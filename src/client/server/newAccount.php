@@ -1,4 +1,4 @@
-<?php 
+<?php git
 $email = $_POST['email'];
 $username = $_POST['username'];
 $password = md5($_POST['password']);
