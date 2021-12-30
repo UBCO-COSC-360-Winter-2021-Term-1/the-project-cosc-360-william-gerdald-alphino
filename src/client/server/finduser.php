@@ -3,7 +3,11 @@ session_start();
 $username = $_POST["username"];
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-
+    $host     = "localhost";
+    $database = "gamex";
+    $user     = "webuser";
+    $password = "P@ssw0rd!";
+    
     $connection = mysqli_connect($host, $user, $password, $database);
     $error = mysqli_connect_error();
     if ($error != null) {

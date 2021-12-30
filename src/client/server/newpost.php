@@ -1,5 +1,10 @@
 <?php
 
+$host     = "localhost";
+$database = "gamex";
+$user     = "webuser";
+$password = "P@ssw0rd!";
+
 
 $connection = mysqli_connect($host, $user, $password, $database);
 
