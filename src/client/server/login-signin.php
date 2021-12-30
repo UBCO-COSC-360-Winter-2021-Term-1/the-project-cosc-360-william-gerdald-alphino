@@ -7,16 +7,15 @@ session_start();
 $host     = "localhost";
 $database = "gamex";
 $user     = "webuser";
-$password = "P@ssw0rd!";
-
+$password = "P@ssw0rd";
 
 $connection = mysqli_connect($host, $user, $password, $database);
-
 
 $error = mysqli_connect_error();
 if($error != null)
 {
   header("Location: ../html/main.html");
+  alert("error");
     die("Unable to connect to database");}
 else
 {
