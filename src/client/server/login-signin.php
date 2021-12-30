@@ -13,6 +13,7 @@ $connection = mysqli_connect($host, $user, $password, $database);
 $error = mysqli_connect_error();
 if($error != null)
 {
+  echo '<a href="'.$return_link.'">Go Back</a>';
   die("Unable to connect to database");}
 else
 {
@@ -38,7 +39,7 @@ else
           echo "<p>Invalid username and/or password </p>";
           if (isset($return_link))
           {
-            echo '<a href="'.$return_link.'">Return to user entry</a>';
+            echo '<a href="'.$return_link.'">>Go Back</a>';
           }
         }
         mysqli_free_result($results);
