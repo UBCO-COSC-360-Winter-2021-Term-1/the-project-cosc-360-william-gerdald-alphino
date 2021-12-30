@@ -28,8 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `username` varchar(255) NOT NULL,
-  `firstName` varchar(255) NOT NULL,
-  `lastName` varchar(255) NOT NULL,
+
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -38,8 +37,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`username`, `firstName`, `lastName`, `email`, `password`) VALUES
-('valvin', 'alpin', 'Billafranka', 'alvin@email.com', 'P@ssword!');
+INSERT INTO `users` (`username`, `email`, `password`) VALUES
+('valvin',  'alvin@email.com', 'P@ssword!');
 
 --
 -- Indexes for dumped tables

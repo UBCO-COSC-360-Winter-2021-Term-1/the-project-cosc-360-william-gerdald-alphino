@@ -11,8 +11,7 @@
 
 	$sql="CREATE TABLE users (
 		username varchar(255) NOT NULL,
-		firstName varchar(255) NOT NULL,
-		lastName varchar(255) NOT NULL,
+	
 		email varchar(255) NOT NULL,
 		pasword VARCHAR(70) NOT NULL UNIQUE
 	  ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
