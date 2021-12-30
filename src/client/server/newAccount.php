@@ -3,7 +3,10 @@
 <body>
 <?php
 
-
+$host     = "localhost";
+$database = "gamex";
+$user     = "webuser";
+$password = "P@ssw0rd";
 
 $connection = mysqli_connect($host, $user, $password, $database);
 
@@ -44,7 +47,7 @@ else
           }
         }
         else {
-          $sql = "INSERT INTO users (username, firstname, lastname, email, password) values ('$user_name','$first_name','$last_name','$email',md5('$password'));";
+          $sql = "INSERT INTO users (username, email, password) values ('$user_name','$email',md5('$password'));";
             if (mysqli_query($connection, $sql))
             {
               $count = mysqli_affected_rows($connection);
