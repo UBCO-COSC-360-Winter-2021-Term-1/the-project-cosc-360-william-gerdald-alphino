@@ -53,7 +53,7 @@ else
             {
               $count = mysqli_affected_rows($connection);
               echo "<p>An account for the user $user_name has been created</p>";
-              header("Location: main.html");
+              header("Location: ../html/login-signin.html");
             }
         }
         mysqli_free_result($results);
