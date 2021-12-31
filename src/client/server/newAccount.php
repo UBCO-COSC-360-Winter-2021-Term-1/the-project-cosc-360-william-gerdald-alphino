@@ -10,7 +10,7 @@
 $host = "localhost";
 $database = "db_94461811";
 $user = "db_94461811";
-$sqlpassword = "db_94461811";
+$password = "db_94461811";
 
 $connection = mysqli_connect($host, $user, $password, $database);
 
@@ -27,19 +27,14 @@ else
 
       if (isset($_POST["username"]))
 
-        $user_name = $_POST["username"];
+        $userName = $_POST["username"];
       if (isset($_POST["email"]))
-
         $email = $_POST["email"];
       if (isset($_POST["password"]))
-
         $password = $_POST["password"];
-
         if (isset($_SERVER['HTTP_REFERER']))
           $return_link = $_SERVER['HTTP_REFERER'];
-
-        $sql = "SELECT * FROM users where username = '$user_name' OR email = '$email';";
-
+        $sql = "SELECT * FROM users where username = '$userName' OR email = '$email';";
         $results = mysqli_query($connection, $sql);
 
         if ($row = mysqli_fetch_assoc($results))
@@ -51,7 +46,7 @@ else
           }
         }
         else {
-          $sql = "INSERT INTO users (username, email, password) values ('$user_name','$email',md5('$password'));";
+          $sql = "INSERT INTO users (username, email, password) values ('$userName','$email',md5('$password'));";
             if (mysqli_query($connection, $sql))
             {
               $count = mysqli_affected_rows($connection);

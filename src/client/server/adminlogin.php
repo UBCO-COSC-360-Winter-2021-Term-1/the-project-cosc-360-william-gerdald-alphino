@@ -12,7 +12,7 @@ $connection = mysqli_connect($host, $user, $password, $database);
 $host = "localhost";
 $database = "db_94461811";
 $user = "db_94461811";
-$sqlpassword = "db_94461811";
+$password = "db_94461811";
 
 $error = mysqli_connect_error();
 if($error != null)
@@ -27,12 +27,12 @@ else
     {
       if (isset($_POST["username"]))
 
-        $user_name = $_POST["username"];
+        $userName = $_POST["username"];
       if (isset($_POST["password"]))
 
         $password1 = $_POST["password"];
 
-        $sql = "SELECT * FROM users where username = '$user_name' AND password = '$password1';";
+        $sql = "SELECT * FROM users where username = '$userName' AND password = '$password1';";
 
         $results = mysqli_query($connection, $sql);
 

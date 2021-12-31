@@ -9,7 +9,7 @@ session_start();
 $host = "localhost";
 $database = "db_94461811";
 $user = "db_94461811";
-$sqlpassword = "db_94461811";
+$password = "db_94461811";
 
 	$connection = mysqli_connect($host, $user, $password, $database);
 
